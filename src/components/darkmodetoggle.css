@@ -1,0 +1,55 @@
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.toggle-btn {
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    border: none;
+    position: relative;
+}
+  
+.toggle-circle {
+    width: 18px;
+    height: 18px;
+    background-color: yellow;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    position: absolute;
+    left: 5px;
+}
+
+.toggle-btn.dark {
+    background-color: #6b46c1;
+}
+
+.toggle-circle.dark {
+    transform: translateX(24px);
+    background-color: #333;
+}
+
+.toggle-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+  
+.dark-mode .toggle-text {
+    color: white;
+}
+  
