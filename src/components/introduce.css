@@ -23,15 +23,23 @@ body {
 }
 
 .introduce-line {
-    width: 40px;
-    height: 2px;
+    width: 100px;
+    height: 1.5px;
     background-color: #3730A3;
+}
+
+.dark-mode .introduce-line {
+    background-color: #74B9FF;
 }
 
 .introduce-text {
     color: #3730A3;
     font-size: 16px;
     font-weight: bold;
+}
+
+.dark-mode .introduce-text {
+    color: #74B9FF;
 }
 
 .introduce-title {
@@ -46,6 +54,10 @@ body {
     max-width: 90%;
 }
 
+.dark-mode .introduce-desc {
+    color: white;
+}
+
 .introduce-links {
     display: flex;
     gap: 1rem;
@@ -54,11 +66,16 @@ body {
 .introduce-btn {
     text-decoration: none;
     border: 1px solid #3730A3;
-    padding: 12px 20px;
+    padding: 10px 20px;
     border-radius: 8px;
     color: #3730A3;
     font-weight: 500;
     transition: all 0.3s ease;
+}
+
+.introduce-btn i {
+    font-size: 20px;
+    margin-right: 8px;
 }
 
 .introduce-btn:hover {
@@ -66,13 +83,29 @@ body {
     color: white;
 }
 
+.dark-mode .introduce-btn:hover {
+    background-color: #3730A3;
+}
+
 .introduce-btn-primary {
     background-color: #3730A3;
     color: white;
 }
 
+.dark-mode .introduce-btn {
+    background-color: white;
+}
+
+.dark-mode .introduce-btn-primary {
+    background-color: #3730A3;
+}
+
 .introduce-btn-primary:hover {
-    background-color: #2a2580;
+    background-color: rgb(132, 12, 148);
+}
+
+.dark-mode .introduce-btn-primary:hover {
+    background-color: rgb(174, 53, 140);
 }
 
 .introduce-img img {

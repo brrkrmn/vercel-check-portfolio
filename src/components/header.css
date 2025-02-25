@@ -33,8 +33,22 @@
     transition: all 0.3s ease;
 }
 
+.dark-mode .button-child {
+    color: white;
+}
+
 .button-child:hover {
     border: 1px solid #3730A3;
     color: #3730A3;
     background: #f3f3ff;
+}
+
+.button-child-primary {
+    border: 1px solid #3730A3;
+    color: #3730A3;
+    padding: 12px 24px;
+}
+
+.dark-mode .button-child-primary {
+    border: 1px solid #74B9FF;
 }

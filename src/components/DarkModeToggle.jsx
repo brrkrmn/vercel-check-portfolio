@@ -7,13 +7,16 @@ export function DarkModeToggle() {
       (!localStorage.getItem("theme") &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
   );
-
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add("dark-mode");
+      document.documentElement.style.backgroundColor = "#121212";
+      document.documentElement.style.color = "white";
       localStorage.setItem("theme", "dark");
     } else {
       document.body.classList.remove("dark-mode");
+      document.documentElement.style.backgroundColor = "#ffffff";
+      document.documentElement.style.color = "#213547";
       localStorage.setItem("theme", "light");
     }
   }, [isDarkMode]);

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: 40px 60px;
+    align-items: flex-start;
 }
 
 .profile-title {
@@ -9,6 +10,10 @@
     font-weight: bold;
     color: #222;
     margin-bottom: 20px;
+}
+
+.dark-mode .profile-title {
+    color: white;
 }
 
 .profile-container {
@@ -25,6 +30,11 @@
     color: #3730A3;
     font-size: 18px;
     font-weight: 600;
+    text-align: left;
+}
+
+.dark-mode .profile-info h4 {
+    color: #74B9FF;
 }
 
 .profile-info ul {
@@ -36,6 +46,11 @@
     margin-bottom: 8px;
     font-size: 14px;
     color: #333;
+    text-align: left;
+}
+
+.dark-mode .profile-info li {
+    color: white;
 }
 
 .profile-about-me {
@@ -46,6 +61,11 @@
     color: #3730A3;
     font-size: 18px;
     font-weight: 600;
+    text-align: left;
+}
+
+.dark-mode .profile-about-me h4 {
+    color: #74B9FF;
 }
 
 .profile-about-me p {
@@ -53,6 +73,11 @@
     color: #666;
     line-height: 1.5;
     margin-bottom: 10px;
+    text-align: left;
+}
+
+.dark-mode .profile-about-me p {
+    color: white;
 }
 
 .profile-bottom-line {

@@ -9,7 +9,7 @@ export function Header() {
             <div className='buttons'>
                 <a href="#" className='button-child'>Skills</a>
                 <a href="#" className='button-child'>Projects</a>
-                <a href="#" className='button-child'>Hire me</a>
+                <a href="#" className='button-child button-child-primary'>Hire me</a>
             </div>
         </div>
     )

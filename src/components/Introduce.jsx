@@ -23,8 +23,12 @@ export function Introduce () {
 
                 <div className='introduce-links'>
                     <a href="#" className='introduce-btn introduce-btn-primary'>Hire me</a>
-                    <a href="https://github.com/Zodiacbtw" className='introduce-btn'>Github</a>
-                    <a href="https://www.linkedin.com/in/dogukantekin/" className='introduce-btn'>Linkedin</a>
+                    <a href="https://github.com/Zodiacbtw" className='introduce-btn'>
+                        <i className='fa-brands fa-github'></i> Github
+                    </a>
+                    <a href="https://www.linkedin.com/in/dogukantekin/" className='introduce-btn'>
+                        <i className='fa-brands fa-linkedin-in'></i> Linkedin
+                    </a>
                 </div>
             </div>
             <div className='introduce-img'>

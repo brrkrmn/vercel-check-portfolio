@@ -10,6 +10,11 @@
     font-weight: bold;
     color: #222;
     margin-bottom: 20px;
+    text-align: left;
+}
+
+.dark-mode .skills-title {
+    color: white;
 }
 
 .skills-container {
@@ -28,12 +33,22 @@
     color: #3730A3;
     font-size: 18px;
     font-weight: 600;
+    text-align: left;
+}
+
+.dark-mode .skills-container-child h4 {
+    color: #74B9FF;
 }
 
 .skills-container-child p {
     font-size: 14px;
     color: #666669;
     line-height: 1.5;
+    text-align: left;
+}
+
+.dark-mode .skills-container-child p {
+    color: white;
 }
 
 .skills-bottom-line {
