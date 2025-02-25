@@ -46,12 +46,14 @@ body {
     font-size: 42px;
     font-weight: bold;
     line-height: 1.2;
+    text-align: left;
 }
 
 .introduce-desc {
     color: #6c6c6c;
     font-size: 16px;
     max-width: 90%;
+    text-align: left;
 }
 
 .dark-mode .introduce-desc {
@@ -73,6 +75,10 @@ body {
     transition: all 0.3s ease;
 }
 
+.dark-mode .introduce-btn {
+    background-color: white;
+}
+
 .introduce-btn i {
     font-size: 20px;
     margin-right: 8px;
@@ -92,20 +98,16 @@ body {
     color: white;
 }
 
-.dark-mode .introduce-btn {
-    background-color: white;
-}
-
 .dark-mode .introduce-btn-primary {
-    background-color: #3730A3;
+    background-color: #74B9FF;
 }
 
 .introduce-btn-primary:hover {
-    background-color: rgb(132, 12, 148);
+    background-color: #74B9FF;
 }
 
 .dark-mode .introduce-btn-primary:hover {
-    background-color: rgb(174, 53, 140);
+    background-color: #3730A3;
 }
 
 .introduce-img img {

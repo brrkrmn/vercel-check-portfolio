@@ -5,6 +5,7 @@ import { Profile } from './components/Profile'
 import { Introduce } from './components/Introduce'
 import { Skills } from './components/Skills'
 import { DarkModeToggle } from './components/DarkModeToggle'
+import { Projects } from './components/Projects'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Introduce />
       <Skills />
       <Profile />
+      <Projects />
     </>
   )
 }
