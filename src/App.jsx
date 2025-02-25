@@ -6,6 +6,7 @@ import { Introduce } from './components/Introduce'
 import { Skills } from './components/Skills'
 import { DarkModeToggle } from './components/DarkModeToggle'
 import { Projects } from './components/Projects'
+import { Footer } from './components/Footer'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Skills />
       <Profile />
       <Projects />
+      <Footer />
     </>
   )
 }
