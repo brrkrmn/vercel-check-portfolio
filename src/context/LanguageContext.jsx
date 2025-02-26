@@ -4,14 +4,21 @@ const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
     const [language, setLanguage] = useState(localStorage.getItem("language") || "en");
-    const [translations, setTranslations] = useState({});
+    const [translations, setTranslations] = useState(null);
 
     useEffect(() => {
-        fetch("/locales.json")
-        .then((res) => res.json())
-        .then((data) => {
-            setTranslations(data);
-        });
+        const fetchTranslations = async () => {
+            try {
+                const res = await fetch("/locales.json");
+                if (!res.ok) throw new Error("Translations could not be loaded");
+                const data = await res.json();
+                setTranslations(data);
+            } catch (error) {
+                console.error("Error loading translations:", error);
+            }
+        };
+
+        fetchTranslations();
     }, []);
 
     useEffect(() => {
@@ -22,8 +29,10 @@ export const LanguageProvider = ({ children }) => {
         setLanguage((prev) => (prev === "en" ? "tr" : "en"));
     };
 
-    if (translations) return (
-        <LanguageContext.Provider value={{ language, translations, toggleLanguage }}>
+    const currentTranslations = translations?.[language] || {};
+
+    return (
+        <LanguageContext.Provider value={{ language, translations: currentTranslations, toggleLanguage }}>
             {children}
         </LanguageContext.Provider>
     );
@@ -31,6 +40,6 @@ export const LanguageProvider = ({ children }) => {
 
 export const useLanguage = () => {
     const context = useContext(LanguageContext);
-    if (!context) throw new Error("no context")
-    return context
-}
+    if (!context) throw new Error("useLanguage must be used within a LanguageProvider");
+    return context;
+};
