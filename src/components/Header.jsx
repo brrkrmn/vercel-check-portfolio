@@ -1,7 +1,6 @@
 import { useLanguage } from '../context/LanguageContext';
 import { DarkModeToggle } from './DarkModeToggle';
 import './header.css';
-import LanguageSwitcher from './LanguageSwitcher';
 
 export function Header() {
     const { translations, language } = useLanguage();
@@ -12,7 +11,6 @@ export function Header() {
         <div className='header'>
             <div className='top-section'>
                 <DarkModeToggle />
-                <LanguageSwitcher />
             </div>
 
             <div className='bottom-section'>
