@@ -1,6 +1,5 @@
-import './introduce.css'
-import React from 'react';
-import { useLanguage } from '../context/LanguageContext'
+import { useLanguage } from '../context/LanguageContext';
+import './introduce.css';
 
 export function Introduce () {
     const { translations, language } = useLanguage();

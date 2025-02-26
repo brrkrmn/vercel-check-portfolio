@@ -1,8 +1,7 @@
-import './header.css'
-import React from 'react'
-import LanguageSwitcher from './LanguageSwitcher'
-import { DarkModeToggle } from './DarkModeToggle'
-import { useLanguage } from '../context/LanguageContext'
+import { useLanguage } from '../context/LanguageContext';
+import { DarkModeToggle } from './DarkModeToggle';
+import './header.css';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export function Header() {
     const { translations, language } = useLanguage();
