@@ -1,33 +1,35 @@
 import './introduce.css'
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext'
 
 export function Introduce () {
+    const { translations, language } = useLanguage();
+
+    if (!translations[language]) return null;
 
     return (
         <div className='introduce'>
             <div className='introduce-section'>
                 <div className='introduce-name'>
                     <span className='introduce-line'></span>
-                    <span className='introduce-text'>Doğukan Tekin</span>
+                    <span className='introduce-text'>{translations[language].introduce_name}</span>
                 </div>
                 <h1 className='introduce-title'>
-                    Curious mind <br />
-                    Creative spirit <br />
-                    Beyond the boundaries
+                    {translations[language].introduce_title_1} <br />
+                    {translations[language].introduce_title_2} <br />
+                    {translations[language].introduce_title_3}
                 </h1>
                 <p className='introduce-desc'>
-                Hello, I'm Doğukan, a Computer Engineer. If your company is looking 
-                for a Data Scientist who can analyze data, derive meaningful insights, 
-                and generate business value, I would be happy to connect.
-                </p>
+                    {translations[language].introduce_desc}
+               </p>
 
                 <div className='introduce-links'>
-                    <a href="#" className='introduce-btn introduce-btn-primary'>Hire me</a>
+                    <a href="#" className='introduce-btn introduce-btn-primary'>{translations[language].hire_me}</a>
                     <a href="https://github.com/Zodiacbtw" className='introduce-btn'>
-                        <i className='fa-brands fa-github'></i> Github
+                        <i className='fa-brands fa-github'></i> {translations[language].github}
                     </a>
                     <a href="https://www.linkedin.com/in/dogukantekin/" className='introduce-btn'>
-                        <i className='fa-brands fa-linkedin-in'></i> Linkedin
+                        <i className='fa-brands fa-linkedin-in'></i> {translations[language].linkedin}
                     </a>
                 </div>
             </div>

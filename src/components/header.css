@@ -1,6 +1,19 @@
 .header {
     display: flex;
+    flex-direction: column;
     padding: 20px;
+    gap: 10px;
+}
+
+.top-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 64px;
+}
+
+.bottom-section {
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }

@@ -4,21 +4,22 @@ import React from 'react'
 import { Profile } from './components/Profile'
 import { Introduce } from './components/Introduce'
 import { Skills } from './components/Skills'
-import { DarkModeToggle } from './components/DarkModeToggle'
 import { Projects } from './components/Projects'
 import { Footer } from './components/Footer'
+import { LanguageProvider } from './context/LanguageContext'
 
 function App() {
 
   return (
     <>
-      <DarkModeToggle />
-      <Header />
-      <Introduce />
-      <Skills />
-      <Profile />
-      <Projects />
-      <Footer />
+      <LanguageProvider>
+        <Header />
+        <Introduce />
+        <Skills />
+        <Profile />
+        <Projects />
+        <Footer />
+      </LanguageProvider>
     </>
   )
 }
