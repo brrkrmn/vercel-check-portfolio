@@ -22,7 +22,7 @@ export const LanguageProvider = ({ children }) => {
         setLanguage((prev) => (prev === "en" ? "tr" : "en"));
     };
 
-    return (
+    if (translations) return (
         <LanguageContext.Provider value={{ language, translations, toggleLanguage }}>
             {children}
         </LanguageContext.Provider>
